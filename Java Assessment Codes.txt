@@ -1,0 +1,366 @@
+//Palindrome Number
+/*import java.util.Scanner;
+class HelloWorld {
+    public static void main(String[] args) {
+        Scanner myObj = new Scanner(System.in);
+        int a =myObj.nextInt();
+        int s=0;
+        for(int i=a;i>0;i=i/10)
+        {
+            int n=i%10;
+            s=s*10+n;
+        }
+        if(s==a)
+        System.out.println("Yes, its a palindrome");
+        else
+        System.out.println("No");
+    }
+}*/
+//To check for leap year
+/*import java.util.Scanner;
+class HelloWorld {
+    public static void main(String[] args) {
+        Scanner myObj = new Scanner(System.in);
+        int a =myObj.nextInt();
+        if(a%4==0)
+        {  if(a%100!=0)
+            {
+                System.out.println("Yes, its a leap");
+            }
+            else
+            {
+                if(a%400==0)
+                System.out.println("Yes, its a leap");
+                else
+                System.out.println("No not a leap year");
+            }
+        }
+        else
+        System.out.println("No not a leap year");
+    }
+}
+*/
+//Check for prime
+/*
+import java.util.Scanner;
+class HelloWorld {
+    public static void main(String[] args) {
+        Scanner myObj = new Scanner(System.in);
+        int a =myObj.nextInt();
+        int c=0;
+        for(int i=a;i>0;i--)
+        {
+            if(a%i==0)
+            c++;
+        }
+        if(c>2)
+        { 
+                System.out.println("Its a composite.");
+            }
+            else
+            {
+                System.out.println("Its a prime.");
+            }
+}
+}
+*/
+//Reverse a string
+/*
+import java.util.Scanner;
+class HelloWorld {
+    public static void main(String[] args) {
+        Scanner myObj = new Scanner(System.in);
+        String a =myObj.nextLine();
+        String b="";
+        
+        for(int i=0;i<=a.length()-1;i++)
+        {
+            char temp = a.charAt(i);
+            b=temp+b;
+            
+        }
+                System.out.println(b);
+}
+}
+*/
+//Print lowercase letters
+/*
+import java.util.Scanner;
+class HelloWorld {
+    public static void main(String[] args) {
+        Scanner myObj = new Scanner(System.in);
+        String a =myObj.nextLine();
+        String b ="";
+        for(int i=0;i<=a.length()-1;i++)
+        {
+            char temp = a.charAt(i);
+            int n=temp;
+            if(n>=97 && n<=122)
+            b=b+temp;
+        }
+                System.out.println(b);
+}
+}
+*/
+// String Concatenations
+/*
+import java.util.Scanner;
+class HelloWorld {
+    public static void main(String[] args) {
+        Scanner myObj = new Scanner(System.in);
+        String a= myObj.nextLine();
+        String b= myObj.nextLine();
+                System.out.println(a.concat(" "+b));
+}
+}
+*/
+//Reverse a number
+/*
+import java.util.Scanner;
+class HelloWorld {
+    public static void main(String[] args) {
+        Scanner myObj = new Scanner(System.in);
+        int a = myObj.nextInt();
+        int s = 0;
+        for(int i=a;i>0;i=i/10)
+        {
+            int n=i%10;
+            s=s*10+n;
+        }
+        System.out.println(s);
+    }
+}
+*/
+//Multilevel Inheritance + Constructor overloading
+/*
+class Grandparent {
+    public  void Grandparent() {
+        System.out.println("Grandparents are here");
+    }
+    public  void Grandparent(int b) {
+        System.out.println(b+" grandparents are here");
+    }
+    
+}
+
+class parent extends Grandparent {
+    public void parent (){
+        System.out.println("parents are here");
+    }
+    public void parent(int a) {
+        System.out.println(a+" parents are here");
+    }
+}
+class child extends parent {
+     public void test1() {
+        System.out.println("children are here");
+    }
+    public static void main(String[] args) {
+        child ref1= new child();
+        ref1.parent();
+        ref1.parent(7);
+        ref1.Grandparent();
+        ref1.Grandparent(9);
+    }
+}
+*/
+Inheritance Exercises:
+//Exercise-1
+/*class animal{
+    public void makesound(){
+        System.out.println("Animal Sounds");
+    }
+}
+class cat extends animal {
+    public void makesound(){
+        System.out.println("Bark sounds");
+    }
+    public static void main(String[] args){
+        animal kk=new animal();
+        kk.makesound();
+        cat kitty = new cat();
+        kitty.makesound();
+    }
+}*/
+//Exercise-2
+/*
+class vehicle{
+    public void drive(){
+        System.out.println("Skrrt Skrrt");
+    }
+}
+class car extends vehicle {
+    public void drive(){
+        System.out.println("Repairing a car");
+    }
+    public static void main(String[] args){
+        vehicle kk=new vehicle();
+        kk.drive();
+        car britney = new car();
+        britney.drive();
+    }
+}*/
+//Exercise-3
+/*
+class shape{
+    public void getArea(){
+        System.out.println("Area");
+    }
+}
+class rectangle extends shape {
+    public void getArea(int a, int b){
+        System.out.println("Area is "+(a*b));
+    }
+    public static void main(String[] args){
+        shape kk=new shape();
+        kk.getArea();
+        rectangle kitty = new rectangle();
+        kitty.getArea(8,9);
+    }
+}*/
+//Exercise-4
+/*class employee{
+    public void work(){
+        System.out.println("Employee's work is to help org.");
+    }
+    public void getSalary(){
+        System.out.println("The avg. salary is 8 LPA");
+    }
+    
+}
+class HR extends employee {
+    public void work(){
+        System.out.println("HR employee work is to manage the work relations amoungst the employees in workplace");
+    }
+    public void addEmployee(){
+        System.out.println("Welcome David our new employee whose managing the stationary");
+    }
+    public static void main(String[] args){
+        employee kk=new employee();
+        kk.work();
+        kk.getSalary();
+        HR kitty = new HR();
+        kitty.addEmployee();
+        kitty.work();
+        kitty.getSalary();
+    }
+}*/
+//Exercise-5
+/*class bankAccount{
+    int balance=0;
+    public void bankAccount(int a)
+    {
+        balance=a;
+    }
+    public int balance()
+    {
+        return this.balance;
+    }
+    public void deposit(int a){
+        balance=balance+a;
+        System.out.println("New balance " + balance);
+    }
+    public void withdraw(int b){
+        balance=balance-b;
+        System.out.println("New balance " - balance);
+    }
+}
+class SavingsAccount extends bankAccount {
+    public void withdraw(int a){
+        int temp=balance();
+        if(temp-a>=0)
+        {
+            balance=balance-a;
+            System.out.println("New balance " + balance);
+        }
+        else
+        System.out.println("Insufficient balance ");
+    }
+    
+    public static void main(String[] args){
+        bankAccount bk=new bankAccount();
+        bk.deposit(400);
+        bk.withdraw(350);
+        SavingsAccount kt = new SavingsAccount();
+        kt.deposit(2400);
+        kt.withdraw(700);
+        kt.withdraw(1800);
+    }
+}*/
+//Exercise-6
+/*class animal{
+    public void move(){
+        System.out.println("Animal moves");
+    }
+}
+class cheetah extends animal {
+    public void move(){
+        System.out.println("cheetah runs");
+    }
+    public static void main(String[] args){
+        animal kk=new animal();
+        kk.move();
+        cheetah kitty = new cheetah();
+        kitty.move();
+    }
+}*/
+//Exercise-7
+/*class person{
+    public void getfirstName(){
+        System.out.println("First Name");
+    }
+    public void getlastName(){
+        System.out.println("Last Name");
+    }
+}
+class employee extends person{
+    int employeeID;
+    String job;
+    public void employee(int a){
+        employeeID=a;
+    }
+    public void employee(String s){
+        job=s;
+    }
+    public void getemployeeID(){
+        System.out.println("Employee ID: "+employeeID);
+    }
+    public void getlastName(){
+        System.out.println("Last Name "+job);
+    }
+    public static void main(String[] args){
+        person kk=new person();
+        kk.getfirstName();
+        kk.getlastName();
+        employee kitty = new employee();
+        kitty.employee(123);
+        kitty.employee("Manager");
+        kitty.getemployeeID();
+        kitty.getlastName();
+    }
+}*/
+//Exercise-8
+/*class shape{
+    public void getArea(){
+        System.out.println("Area");
+    }
+    public void getPerimeter(){
+        System.out.println("Perimeter");
+    }
+}
+class circle extends shape {
+    public void getArea(int a){
+        System.out.println("Area is "+(a*a*3.14));
+    }
+    public void getPerimeter(int a){
+        System.out.println("Perimeter is "+(2*a*3.14));
+    }
+    public static void main(String[] args){
+        shape kk=new shape();
+        kk.getArea();
+        kk.getPerimeter();
+        circle kitty = new circle();
+        kitty.getArea(4);
+        kitty.getPerimeter(4);
+    }
+}*/
